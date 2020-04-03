@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6f9f7a74b7034c1ef9475d501e537e2",
+    "content-hash": "7fe3613f5341bb039f69241c40b83b1c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1393,6 +1393,61 @@
                 "source": "https://git.drupalcode.org/project/geofield",
                 "issues": "https://www.drupal.org/project/issues/geofield",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/geophp",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/geophp.git",
+                "reference": "8.x-1.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geophp-8.x-1.0-beta2.zip",
+                "reference": "8.x-1.0-beta2",
+                "shasum": "c8bc85f4d646ff83591f10092d8ebf5390ac0ff3"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2",
+                    "datestamp": "1507629244",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Brandonian",
+                    "homepage": "https://www.drupal.org/user/77766"
+                },
+                {
+                    "name": "phayes",
+                    "homepage": "https://www.drupal.org/user/47098"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                }
+            ],
+            "description": "Wraps the geoPHP library: advanced geometry operations in PHP.",
+            "homepage": "https://www.drupal.org/project/geophp",
+            "support": {
+                "source": "https://git.drupalcode.org/project/geophp"
             }
         },
         {
@@ -4380,6 +4435,7 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/field_permissions": 5,
+        "drupal/geophp": 10,
         "drupal/inline_entity_form": 5,
         "drupal/leaflet_widget": 15
     },
