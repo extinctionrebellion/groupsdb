@@ -140,7 +140,7 @@
 
     // Set initial view, fallback to displaying the whole world.
     if (self.settings.center && self.settings.zoom) {
-      self.lMap.setView(new L.LatLng(self.settings.center.lat, self.settings.center.lon), self.settings.zoom);
+      self.lMap.setView(new L.LatLng(self.settings.center.lat, self.settings.center.lng), self.settings.zoom);
     }
     else {
       self.lMap.fitWorld();
@@ -409,7 +409,7 @@
 
   Drupal.Leaflet.prototype.create_point = function(marker) {
     var self = this;
-    var latLng = new L.LatLng(marker.lat, marker.lon);
+    var latLng = new L.LatLng(marker.lat, marker.lng);
     self.bounds.push(latLng);
     var lMarker;
     var tooltip = marker.label ? marker.label.replace(/<[^>]*>/g, '').trim() : '';
@@ -478,7 +478,7 @@
     var self = this;
     var latlngs = [];
     for (var i = 0; i < polyline.points.length; i++) {
-      var latlng = new L.LatLng(polyline.points[i].lat, polyline.points[i].lon);
+      var latlng = new L.LatLng(polyline.points[i].lat, polyline.points[i].lng);
       latlngs.push(latlng);
       self.bounds.push(latlng);
     }
@@ -498,7 +498,7 @@
     var self = this;
     var latlngs = [];
     for (var i = 0; i < polygon.points.length; i++) {
-      var latlng = new L.LatLng(polygon.points[i].lat, polygon.points[i].lon);
+      var latlng = new L.LatLng(polygon.points[i].lat, polygon.points[i].lng);
       latlngs.push(latlng);
       self.bounds.push(latlng);
     }
@@ -512,7 +512,7 @@
       var latlngs = [];
       var polygon = multipolygon.component[x];
       for (var i = 0; i < polygon.points.length; i++) {
-        var latlng = [polygon.points[i].lat, polygon.points[i].lon];
+        var latlng = [polygon.points[i].lat, polygon.points[i].lng];
         latlngs.push(latlng);
         self.bounds.push(latlng);
       }
@@ -528,7 +528,7 @@
       var latlngs = [];
       var polygon = multipoly.component[x];
       for (var i = 0; i < polygon.points.length; i++) {
-        var latlng = new L.LatLng(polygon.points[i].lat, polygon.points[i].lon);
+        var latlng = new L.LatLng(polygon.points[i].lat, polygon.points[i].lng);
         latlngs.push(latlng);
         self.bounds.push(latlng);
       }
